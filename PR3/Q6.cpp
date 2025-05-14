@@ -7,26 +7,16 @@ main(){
 	
 	for(i=1 ; i<=5 ; i++){
 		
-		for(j=1 ; j<=i ; j++){
-			
-			cout<<j<<" ";
-			
+		for(j=1 ; j<=i ; j++){	
+			cout<<j<<" ";	
 		}
 		for(s=5; s>i ; s--){
 			cout<<"    ";
 		}
-		
-			for(j=1 ; j<=i ; j++){
-			
-			cout<<j<<" ";
-			
+		for(j=i ; j>=1 ; j--){	
+			cout<<j<<" ";	
 		}
-		cout<<"\n"<<endl;
+			cout<<"\n"<<endl;
 		
 	}
-	
-	
-	
-	
-	
 }
