@@ -14,7 +14,15 @@ main(){
 			cin>>a[i];
 		}
 	
+		cout<<"\n\n";
+		
+		cout<<"Positive Numbers :"<<endl;
+	
 		for(i=0;i<size;i++){
-			cout<<a[i]<<endl;;
-		}
+			
+			if(a[i]>0){
+				cout<<a[i]<<endl;
+			}
+	
+		}	
 }

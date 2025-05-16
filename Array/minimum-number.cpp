@@ -14,7 +14,19 @@ main(){
 			cin>>a[i];
 		}
 	
+		cout<<"\n\n";
+		
+		cout<<"Max Numbers :"<<endl;
+	
+		int max=a[0];
+	
 		for(i=0;i<size;i++){
-			cout<<a[i]<<endl;;
-		}
+			
+			if(max<a[i]){
+				max=a[i];
+				
+			}
+	
+		}	
+		cout<<mini<<endl;
 }

@@ -14,7 +14,15 @@ main(){
 			cin>>a[i];
 		}
 	
+		cout<<"\n\n";
+		
+		cout<<"Odd Numbers :"<<endl;
+	
 		for(i=0;i<size;i++){
-			cout<<a[i]<<endl;;
-		}
+			
+			if(i%2==0){
+				cout<<a[i]<<endl;
+			}
+	
+		}	
 }

@@ -14,7 +14,19 @@ main(){
 			cin>>a[i];
 		}
 	
+		cout<<"\n\n";
+		
+		cout<<"Mini Numbers :"<<endl;
+	
+	
+	int mini=a[0];
 		for(i=0;i<size;i++){
-			cout<<a[i]<<endl;;
-		}
+			
+			if(mini>a[i]){
+				mini=a[i];
+				
+			}
+	
+		}	
+		cout<<mini<<endl;
 }

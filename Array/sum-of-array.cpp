@@ -16,5 +16,8 @@ main(){
 	
 		for(i=0;i<size;i++){
 			cout<<a[i]<<endl;;
+			sum=sum + a[i];
 		}
+	
+		cout<<sum;
 }
