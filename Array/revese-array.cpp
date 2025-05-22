@@ -16,7 +16,7 @@ int main() {
     }
 
     cout << "\nReverse Numbers:" << endl;
-    for(int i = size - 1; i >= 1; i--) {
+    for(int i = size - 1; i >= 0; i--) {
         cout << a[i] << " ";
     }
 
