@@ -10,7 +10,7 @@ main(){
 	
 	cout<<"Enter Your Row size :";
 	cin>>row;
-	cout<<"Enter Your Colsize :";
+	cout<<"Enter Your Col size :";
 	cin>>col;
 		
 	int a[row][col];
