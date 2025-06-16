@@ -19,12 +19,24 @@ public:
         cout << "Balance: " << Balance << endl;
     }
 
+    void deposit(float amount) {
+        Balance += amount;
+        cout << "Amount Deposited Successfully. New Balance: " << Balance << endl;
+    }
 
+    void withdraw(float amount) {
+        if (amount > Balance) {
+            cout << "Insufficient Balance!" << endl;
+        } else {
+            Balance -= amount;
+            cout << "Amount Withdrawn Successfully. New Balance: " << Balance << endl;
+        }
+    }
 };
 
 int main() {
-    Bank b[100];
-    int cnt = 0;
+    Bank b[100]; 
+    int cnt = 0; 
     int choice;
 
     while (1) {
@@ -55,46 +67,68 @@ int main() {
                 cin >> Balance;
                 b[cnt].setDetails(AcNo, Name, Balance);
                 cnt++;
+                cout << "Account Created Successfully!\n";
                 break;
             }
-			
-			case 2: {
-				int acno , i;
-				cout << "Enter Account Number: ";
+
+            case 2: {
+                int acno, i;
+                cout << "Enter Account Number: ";
                 cin >> acno;
-                for( i=0;i<cnt;i++){
-                	if(b[i].AcNo==acno){
-                		b[i].getDetails();
-                		break;
-					}
-					
-				}
-				if(i==cnt){
-					cout<<"Account Not Found !"<<endl;
-				}
-				break;
-			}
-        
+                for (i = 0; i < cnt; i++) {
+                    if (b[i].AcNo == acno) {
+                        b[i].getDetails();
+                        break;
+                    }
+                }
+                if (i == cnt) {
+                    cout << "Account Not Found!" << endl;
+                }
+                break;
+            }
 
-//            case 2: {
-//                int acno,i;
-//                cout << "Enter Account Number: ";
-//                cin >> acno;
-//              
-//                for (i = 0; i < cnt; i++) {
-//                    if (b[i].AcNo == acno) {
-//                        b[i].getDetails();
-//                        break;
-//                    }
-//                }
-//                if (i == cnt) {
-//                    cout << "Account Not Found!" << endl;
-//                }
-//                break;
-//            }
+            case 3: {
+                int acno;
+                float amount;
+                cout << "Enter Account Number: ";
+                cin >> acno;
+                cout << "Enter Amount to Deposit: ";
+                cin >> amount;
+                int i;
+                for (i = 0; i < cnt; i++) {
+                    if (b[i].AcNo == acno) {
+                        b[i].deposit(amount);
+                        break;
+                    }
+                }
+                if (i == cnt) {
+                    cout << "Account Not Found!" << endl;
+                }
+                break;
+            }
 
+            case 4: {
+                int acno;
+                float amount;
+                cout << "Enter Account Number: ";
+                cin >> acno;
+                cout << "Enter Amount to Withdraw: ";
+                cin >> amount;
+                int i;
+                for (i = 0; i < cnt; i++) {
+                    if (b[i].AcNo == acno) {
+                        b[i].withdraw(amount);
+                        break;
+                    }
+                }
+                if (i == cnt) {
+                    cout << "Account Not Found!" << endl;
+                }
+                break;
+            }
 
-          
+            default:
+                cout << "Invalid Option. Please try again.\n";
         }
     }
 
